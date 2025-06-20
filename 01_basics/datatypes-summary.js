@@ -49,3 +49,41 @@ object datatype value as an object
 function datatype show as a function-object
 array shows as a object.
 */
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++
+
+// Two types of memory : Stack (For Primitive) & Heap(For Non-Primitve)
+//When stack memory is used means you got copy of variable
+//when heap memory is used you get reference value of variable means original value , when you changed the value it also changed in original value.
+
+let myYoutubename = "stocktrader"
+let anothername = myYoutubename
+console.log(anothername);
+//here anothername copy the value of myYoutubename
+//now we change the value of anothername
+anothername = "lalutrader"
+console.log(anothername); 
+console.log(myYoutubename);
+//now we change anothername value but it don't changed in memory because stack don't change the original value . it only change the value of copy
+//when we get myYoutubename value it doesn't change , but when we get value of anothername it changed to new value.
+
+
+
+let userone = {
+    email: "sahil@gmail.in",
+    upi: "758484@ybl"
+}
+
+let usertwo = userone
+//here we declare two variable userone and usertwo , & we gave value of one to the two. but here usertwo can't copy the value of userone . it take direct refrence of userone value from heap memory
+// here both  user get the same reference, don't get copy.
+
+usertwo.email = "lalu@gmail.com"
+
+console.log(usertwo.email);
+console.log(userone.email);
+// here we changed the value of usertwo email. now value of userone email is also changed.
+
+
