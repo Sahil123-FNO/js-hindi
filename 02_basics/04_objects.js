@@ -59,4 +59,38 @@ console.log(Object.entries(tinderUser));
 console.log(tinderUser.hasOwnProperty('isLogged'));
 
 
+//Object Destructuring
+const course = {
+    coursename: "JS",
+    price: "999",
+    courseInstructor: "Sahil"
+}
+
+//console.log(course.courseInstructor);
+//we have also another method.
+
+const {courseInstructor: instructor} = course
+console.log(instructor);
+
+
+//All API is in a JSON format.
+//This is a JSON format
+{
+    "name":"sahil",
+    "coursename": "js in hindi",
+    "price": "free",
+}
+
+//we cancreate this JSON into Object and return key value.
+
+//Sometime we get API in array format.
+[
+    {},
+    {},
+    {}
+]
+
+
+
+
 
